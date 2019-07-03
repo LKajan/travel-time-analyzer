@@ -1,0 +1,20 @@
+CREATE TABLE metrop.matrix (
+    from_id integer,
+    to_id integer,
+    walk_t smallint,
+    walk_d integer,
+    bike_s_t smallint,
+    bike_f_t smallint,
+    bike_d integer,
+    pt_r_tt smallint,
+    pt_r_t smallint,
+    pt_r_d integer,
+    pt_m_tt smallint,
+    pt_m_t smallint,
+    pt_m_d integer,
+    car_r_t smallint,
+    car_r_d integer,
+    car_m_t smallint,
+    car_m_d integer,
+    car_sl_t smallint
+);

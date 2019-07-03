@@ -1,0 +1,4 @@
+*.zip
+/MetropAccess_YKR_grid
+
+*.gpkg-*
