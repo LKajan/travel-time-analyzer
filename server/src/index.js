@@ -1,36 +1,11 @@
 const express = require('express')
-
-const { gql } = require('apollo-server')
 const { ApolloServer } = require('apollo-server-express')
 
-const books = [
-  {
-    title: 'Harry Potter and the Chamber of Secrets',
-    author: 'J.K. Rowling',
-  },
-  {
-    title: 'Jurassic Park',
-    author: 'Michael Crichton',
-  },
-]
+const typeDefs = require('./typedefs')
+const resolvers = require('./resolvers')
 
-const typeDefs = gql`
-  type Book {
-    title: String
-    author: String
-  }
-  type Query {
-    books: [Book]
-  }
-`
+const server = new ApolloServer({ typeDefs, resolvers });
 
-const resolvers = {
-  Query: {
-    books: () => books,
-  },
-}
-
-const server = new ApolloServer({ typeDefs, resolvers })
 const app = express()
 server.applyMiddleware({ app })
 
