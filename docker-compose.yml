@@ -1,0 +1,21 @@
+version: '3.5'
+
+volumes:
+  local_postgres_data: {}
+  local_postgres_data_backups: {}
+
+services:
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    image: metrop/server
+
+  db:
+    image: kartoza/postgis
+    volumes:
+      - local_postgres_data:/var/lib/postgresql/data
+      - local_postgres_data_backups:/backups
+    envs:
+      -
+

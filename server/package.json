@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon --inspect=0.0.0.0 src/index.js",
+    "start:prod": "node src/index.js"
   },
   "dependencies": {
     "apollo-server": "^2.6.7",

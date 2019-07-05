@@ -8,7 +8,7 @@ input LocationInput {
 
 type Query {
   "returns all trips from given location"
-  travelTimesFrom(from: [LocationInput]!): [Trip]
+  travelTimesFrom(from: [LocationInput!]!): [Trip]
   travelTimesTo(to: [LocationInput]!): [Trip]
   travelTime(from: LocationInput!, to: LocationInput!): Trip
 }
