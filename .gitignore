@@ -1,4 +1,6 @@
+#data
 *.zip
-/MetropAccess_YKR_grid
+*.gpkg*
 
-*.gpkg-*
+#ide
+.vscode
